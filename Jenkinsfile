@@ -1,11 +1,11 @@
 pipeline {
     agent any
-    stage('Checkout repository') {
-        steps {
-            checkout scm
-        }
-    }
     stages {
+        stage('Checkout repository') {
+            steps {
+                checkout scm
+            }
+        }
         stage('Restore dependencies') {
             steps {
                 bat 'dotnet restore'
