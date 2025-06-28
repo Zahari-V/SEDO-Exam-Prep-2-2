@@ -1,5 +1,10 @@
 pipeline {
     agent any
+    stage('Checkout repository') {
+        steps {
+            checkout scm
+        }
+    }
     stages {
         stage('Restore dependencies') {
             steps {
